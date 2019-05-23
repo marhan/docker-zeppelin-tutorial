@@ -3,5 +3,5 @@
 .idea
 
 # docker
-logs
-notebook
+zeppelin/logs
+zeppelin/notebook
