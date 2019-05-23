@@ -1,0 +1,11 @@
+CREATE DATABASE zeppelin
+WITH OWNER = postgres
+ENCODING = 'UTF8'
+TABLESPACE = pg_default
+CONNECTION LIMIT = -1;
+
+GRANT CONNECT, TEMPORARY ON DATABASE zeppelin TO PUBLIC;
+GRANT ALL ON DATABASE zeppelin TO postgres;
+GRANT CONNECT ON DATABASE zeppelin TO data_writer;
+GRANT ALL ON DATABASE zeppelin TO db_admin;
+GRANT ALL PRIVILEGES ON DATABASE zeppelin TO zeppelin_admin;

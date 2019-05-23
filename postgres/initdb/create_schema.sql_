@@ -1,0 +1,10 @@
+CREATE SCHEMA zeppelin AUTHORIZATION zeppelin_admin;
+
+-- grant to roles (users) and scheme
+GRANT USAGE ON SCHEMA zeppelin TO zeppelin_admin;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA zeppelin TO zeppelin_admin;
+
+-- create the service application user (role) for CRUD access
+GRANT USAGE ON SCHEMA zeppelin TO zeppelin_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA zeppelin GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO zeppelin_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA zeppelin GRANT USAGE, SELECT ON SEQUENCES TO zeppelin_user;

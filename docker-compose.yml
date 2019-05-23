@@ -10,5 +10,36 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./logs:/logs
-      - ./notebook:/notebook
+      - ./zeppelin/logs:/logs
+      - ./zeppelin/notebook:/notebook
+    depends_on:
+      - postgresdb
+    networks:
+      - zepnet
+
+  postgresdb:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_ZEPPELIN_USER: ${POSTGRES_USER}
+      POSTGRES_ZEPPELIN_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_ZEPPELIN_DATABASE: ${POSTGRES_DATABASE}
+    ports:
+      - 8081:5432
+    volumes:
+      - ./postgres/initdb:/docker-entrypoint-initdb.d
+    networks:
+      - zepnet
+
+  adminer:
+    image: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: postgresdb
+    ports:
+      - 8082:8080
+    depends_on:
+      - postgresdb
+    networks:
+      - zepnet
+networks:
+  zepnet:
