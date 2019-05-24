@@ -4,5 +4,4 @@
 
 # docker
 /zeppelin/logs
-/zeppelin/notebook
 /minio/data

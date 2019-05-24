@@ -1,0 +1,3 @@
+[submodule "zeppelin/notebook"]
+	path = zeppelin/notebook
+	url = git@github.com:marhan/zeppelin-notebook-samples.git

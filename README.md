@@ -1,4 +1,5 @@
 # Docker based Zeppelin
+
 Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) with internal [Spark](http://spark.apache.org/docs/latest/index.html).
 
 ## Introduction
@@ -7,6 +8,15 @@ Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/s
 
 [Apache Zeppelin](http://zeppelin.apache.org/) is a Web-based notebook that enables data-driven, 
 interactive data analytics and collaborative documents with SQL, Scala and more.
+
+## Hints
+
+The Zeppelin Notebooks are placed in its [own repository](https://github.com/marhan/zeppelin-notebook-samples) and will be checked out as git submodule.
+
+## Checkout
+
+    git clone git@github.com:marhan/docker-zeppelin.git
+    git submodule update --init
 
 ## Start complete stack
 
