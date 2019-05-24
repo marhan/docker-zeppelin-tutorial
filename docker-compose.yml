@@ -13,44 +13,28 @@ services:
     volumes:
       - ./zeppelin/logs:/logs
       - ./zeppelin/notebook:/notebook
-    depends_on:
-      - postgresdb
-      - minio
+      - ./zeppelin/conf/zeppelin-env.sh:/zeppelin/conf/zeppelin-env.sh
+      - ./zeppelin/properties:/app/properties
+      - ./zeppelin/libs:/app/libs
+#    depends_on:
+#      - postgresdb
+#      - minio
     networks:
       - zepnet
 
   minio:
     image: minio/minio:RELEASE.2019-05-23T00-29-34Z
     ports:
-      - 9000:9000
+      - 8083:9000
     volumes:
-      - ./test/.minio/data:/export
-      - ./test/.minio/config:/root/.minio
+      - ./minio/data:/data
+      #- ./minio/config/config:/root/.minio
     environment:
       MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
       MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
     networks:
       - zepnet
     command: minio server /data
-#
-      #  createbuckets:
-      #    image: minio/mc:RELEASE.2019-05-23T01-33-27Z
-      #    volumes:
-      #      - ./minio/initdata:/initdata
-      #    depends_on:
-      #      - minio
-      #    environment:
-      #      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      #      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
-      #      MINIO_BUCKET: ${MINIO_BUCKET}
-      #    entrypoint: >
-      #      /bin/sh -c "
-      #      /usr/bin/mc config host add myminio http://minio:9000 ${MINIO_ACCESS_KEY} ${MINIO_SECRET_KEY};
-      #      /usr/bin/mc mb myminio/${MINIO_BUCKET};
-      #      /usr/bin/mc cp /initdata/bank.csv myminio/${MINIO_BUCKET};
-      #      /usr/bin/mc ls myminio;
-    #      exit 0;
-    #      "
 
   postgresdb:
     image: postgres

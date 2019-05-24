@@ -1,4 +1,4 @@
-# Docker based Zeppelin
+# Docker based Zeppelin (Work in progress)
 
 Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) with internal [Spark](http://spark.apache.org/docs/latest/index.html).
 
@@ -13,9 +13,8 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 ## Checkout
 
-    git clone git@github.com:marhan/docker-zeppelin.git
-    git submodule update --init
-
+    git clone git clone --recursive git@github.com:marhan/docker-zeppelin.git
+    
 ## Start complete stack
 
     docker-compose up
@@ -30,7 +29,6 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 - [Postgres](https://hub.docker.com/_/postgres)
 - [Adminer](https://hub.docker.com/_/adminer/)
 - [Minio](https://hub.docker.com/r/minio/minio/)
-- [Minio Client](https://hub.docker.com/r/minio/mc)
 
 ## Development
 
@@ -41,3 +39,12 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 ### Remove all containers
 
     docker-compose rm --force -v
+    
+### Bash into running container
+
+    docker-compose exec <container_name> bash
+    
+### Download dependencies
+
+    cd zeppelin
+    mvn dependency:copy-dependencies -DoutputDirectory=libs
