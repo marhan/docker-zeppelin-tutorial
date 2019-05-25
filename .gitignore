@@ -6,3 +6,4 @@
 /zeppelin/logs
 /minio/data/.minio.sys
 /minio/config
+/webdav/DavLock

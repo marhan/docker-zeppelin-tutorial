@@ -13,28 +13,27 @@ services:
     volumes:
       - ./zeppelin/logs:/logs
       - ./zeppelin/notebook:/notebook
-      - ./zeppelin/conf/zeppelin-env.sh:/zeppelin/conf/zeppelin-env.sh
-      - ./zeppelin/properties:/app/properties
-      - ./zeppelin/libs:/app/libs
-#    depends_on:
-#      - postgresdb
-#      - minio
+      #- ./zeppelin/conf/zeppelin-env.sh:/zeppelin/conf/zeppelin-env.sh
+      #- ./zeppelin/properties:/app/properties
+      #- ./zeppelin/libs:/app/libs
+    depends_on:
+      - postgresdb
+      - webdav
     networks:
       - zepnet
 
-  minio:
-    image: minio/minio:RELEASE.2019-05-23T00-29-34Z
+  webdav:
+    image: bytemark/webdav
     ports:
-      - 8083:9000
-    volumes:
-      - ./minio/data:/data
-      #- ./minio/config/config:/root/.minio
+      - "8083:80"
     environment:
-      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+      AUTH_TYPE: Basic
+      USERNAME: zeppelin
+      PASSWORD: zeppelin
+    volumes:
+      - ./webdav:/var/lib/dav
     networks:
       - zepnet
-    command: minio server /data
 
   postgresdb:
     image: postgres
@@ -63,3 +62,4 @@ services:
 
 networks:
   zepnet:
+    driver: bridge
