@@ -13,7 +13,7 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 ## Checkout
 
-    git clone git clone --recursive git@github.com:marhan/docker-zeppelin.git
+    git clone --recursive git@github.com:marhan/docker-zeppelin.git
     
 ## Start complete stack
 
