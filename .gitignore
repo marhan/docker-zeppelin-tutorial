@@ -4,6 +4,6 @@
 
 # docker
 /zeppelin/logs
+/zeppelin/notebook
 /minio/data/.minio.sys
-/minio/config
 /webdav/DavLock
