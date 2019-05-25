@@ -7,3 +7,4 @@
 /zeppelin/notebook
 /minio/data/.minio.sys
 /webdav/DavLock
+/postgres/data

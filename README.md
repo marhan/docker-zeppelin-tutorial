@@ -21,7 +21,12 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
     
 ## Access WebUIs
 
-* [Zeppelin](http://localhost:8080) 
+* [Zeppelin](http://localhost:10001) 
+
+## Source of data
+
+- [London population](https://github.com/datasets/london-population)
+- [Using data mining for bank direct marketing](http://repositorium.sdum.uminho.pt/handle/1822/14838)
     
 ## Docker Images used
 
@@ -34,10 +39,12 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 ### Recreate one specific container
 
+    docker-compose stop
     docker-compose up --force-recreate <container_name>
     
 ### Remove all containers
 
+    docker-compose stop
     docker-compose rm --force -v
     
 ### Bash into running container

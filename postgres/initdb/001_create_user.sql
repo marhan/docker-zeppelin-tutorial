@@ -1,3 +1,5 @@
+-- noinspection SqlNoDataSourceInspectionForFile
+
 CREATE ROLE db_admin
 	NOSUPERUSER
 	INHERIT

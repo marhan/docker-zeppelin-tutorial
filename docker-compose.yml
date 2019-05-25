@@ -14,7 +14,9 @@ services:
       - ./zeppelin/logs:/logs
       - ./zeppelin/notebook:/notebook
       - ./zeppelin/conf/zeppelin-env.sh:/zeppelin/conf/zeppelin-env.sh
-      #- ./zeppelin/properties:/app/properties
+      - ./zeppelin/conf/shiro.ini.template:/zeppelin/conf/shiro.ini.template
+      - ./zeppelin/conf/interpreter.json:/zeppelin/conf/interpreter.json
+      - ./zeppelin/properties:/app/properties
       - ./zeppelin/libs:/app/libs
     networks:
       - zepnet
