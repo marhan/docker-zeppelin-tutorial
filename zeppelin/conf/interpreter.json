@@ -294,7 +294,8 @@
         },
         "default.statementPrecode": {
           "name": "default.statementPrecode",
-          "value": ""
+          "value": "",
+          "type": "string"
         },
         "zeppelin.jdbc.concurrent.use": {
           "name": "zeppelin.jdbc.concurrent.use",
@@ -1437,8 +1438,8 @@
       "option": {
         "remote": true,
         "port": -1,
-        "perNote": "scoped",
-        "perUser": "",
+        "perNote": "shared",
+        "perUser": "shared",
         "isExistingProcess": false,
         "setPermission": false,
         "owners": [],
@@ -1734,6 +1735,30 @@
     }
   },
   "interpreterBindings": {
+    "2EBE1G41D": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "postgres_zeppelin_db",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
     "2EB19QKHH": [
       "spark",
       "md",
@@ -1783,6 +1808,30 @@
       "sap"
     ],
     "2EEMWVG5P": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "postgres_zeppelin_db",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
+    "2EB5MGNZQ": [
       "spark",
       "md",
       "angular",

@@ -11,6 +11,18 @@ interactive data analytics and collaborative documents with SQL, Scala and more.
 
 The Zeppelin Notebooks are placed in its [own repository](https://github.com/marhan/zeppelin-notebook-samples) and will be checked out as git submodule.
 
+## Requirement
+
+### Software
+- Docker
+- Docker Compose
+
+### Hardware (complete stack)
+- RAM = 6GB
+
+### Hardware (zeppelin only)  
+- RAM = 2GB
+
 ## Checkout
 
     git clone --recursive git@github.com:marhan/docker-zeppelin.git
@@ -21,7 +33,10 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
     
 ## Access WebUIs
 
-* [Zeppelin](http://localhost:10001) 
+* [Zeppelin](http://localhost:10000) 
+* [Adminer (Postgres)](http://localhost:10002) 
+* [Webdav Web Server](http://localhost:10003) 
+* [Minio Cloud Storage Server](http://localhost:10004) 
 
 ## Source of data
 
