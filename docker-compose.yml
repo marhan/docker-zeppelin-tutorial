@@ -3,21 +3,14 @@ version: '3'
 services:
 
   zeppelin:
-    image: apache/zeppelin:0.8.1
-    environment:
-      ZEPPELIN_PORT: 8080
-      ZEPPELIN_LOG_DIR: '/logs'
-      ZEPPELIN_NOTEBOOK_DIR: '/notebook'
+    build:
+      context: ./zeppelin/docker
     ports:
       - 10000:8080
     volumes:
-      - ./zeppelin/logs:/logs
-      - ./zeppelin/notebook:/notebook
-      - ./zeppelin/conf/zeppelin-env.sh:/zeppelin/conf/zeppelin-env.sh
-      - ./zeppelin/conf/shiro.ini.template:/zeppelin/conf/shiro.ini.template
+      - ./zeppelin/logs:/opt/logs
+      - ./zeppelin/notebook:/opt/notebook
       - ./zeppelin/conf/interpreter.json:/zeppelin/conf/interpreter.json
-      - ./zeppelin/properties:/app/properties
-      - ./zeppelin/libs:/app/libs
     networks:
       - zepnet
 
