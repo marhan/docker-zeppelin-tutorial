@@ -20,7 +20,6 @@ services:
       - 10004:9000
     volumes:
       - ./minio/data:/data
-      #- ./minio/config/config:/root/.minio
     environment:
       MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
       MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
