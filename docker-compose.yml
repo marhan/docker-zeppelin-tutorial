@@ -10,6 +10,7 @@ services:
     volumes:
       - ./zeppelin/logs:/opt/logs
       - ./zeppelin/notebook:/opt/notebook
+      - ./zeppelin/files:/opt/files
       - ./zeppelin/conf/interpreter.json:/zeppelin/conf/interpreter.json
     networks:
       - zepnet
