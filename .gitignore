@@ -4,4 +4,7 @@
 
 # docker
 /zeppelin/logs
-/minio/data
+/zeppelin/notebook
+/minio/data/.minio.sys
+/webdav/DavLock
+/postgres/data

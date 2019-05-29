@@ -3,54 +3,43 @@ version: '3'
 services:
 
   zeppelin:
-    image: apache/zeppelin:0.8.1
-    environment:
-      ZEPPELIN_PORT: 8080
-      ZEPPELIN_LOG_DIR: '/logs'
-      ZEPPELIN_NOTEBOOK_DIR: '/notebook'
+    build:
+      context: ./zeppelin/docker
     ports:
-      - 8080:8080
+      - 10000:8080
     volumes:
-      - ./zeppelin/logs:/logs
-      - ./zeppelin/notebook:/notebook
-    depends_on:
-      - postgresdb
-      - minio
+      - ./zeppelin/logs:/opt/logs
+      - ./zeppelin/notebook:/opt/notebook
+      - ./zeppelin/conf/interpreter.json:/zeppelin/conf/interpreter.json
     networks:
       - zepnet
 
   minio:
     image: minio/minio:RELEASE.2019-05-23T00-29-34Z
     ports:
-      - 9000:9000
+      - 10004:9000
     volumes:
-      - ./test/.minio/data:/export
-      - ./test/.minio/config:/root/.minio
+      - ./minio/data:/data
+      #- ./minio/config/config:/root/.minio
     environment:
       MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
       MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+    command: minio server /data
     networks:
       - zepnet
-    command: minio server /data
-#
-      #  createbuckets:
-      #    image: minio/mc:RELEASE.2019-05-23T01-33-27Z
-      #    volumes:
-      #      - ./minio/initdata:/initdata
-      #    depends_on:
-      #      - minio
-      #    environment:
-      #      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
-      #      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
-      #      MINIO_BUCKET: ${MINIO_BUCKET}
-      #    entrypoint: >
-      #      /bin/sh -c "
-      #      /usr/bin/mc config host add myminio http://minio:9000 ${MINIO_ACCESS_KEY} ${MINIO_SECRET_KEY};
-      #      /usr/bin/mc mb myminio/${MINIO_BUCKET};
-      #      /usr/bin/mc cp /initdata/bank.csv myminio/${MINIO_BUCKET};
-      #      /usr/bin/mc ls myminio;
-    #      exit 0;
-    #      "
+
+  webdav:
+    image: bytemark/webdav
+    ports:
+      - 10003:80
+    environment:
+      AUTH_TYPE: Basic
+      USERNAME: zeppelin
+      PASSWORD: zeppelin
+    volumes:
+      - ./webdav:/var/lib/dav
+    networks:
+      - zepnet
 
   postgresdb:
     image: postgres
@@ -60,9 +49,10 @@ services:
       POSTGRES_ZEPPELIN_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_ZEPPELIN_DATABASE: ${POSTGRES_DATABASE}
     ports:
-      - 8081:5432
+      - 10001:5432
     volumes:
       - ./postgres/initdb:/docker-entrypoint-initdb.d
+      - ./postgres/data:/var/lib/postgresql/data
     networks:
       - zepnet
 
@@ -71,7 +61,7 @@ services:
     environment:
       ADMINER_DEFAULT_SERVER: postgresdb
     ports:
-      - 8082:8080
+      - 10002:8080
     depends_on:
       - postgresdb
     networks:
@@ -79,3 +69,4 @@ services:
 
 networks:
   zepnet:
+    driver: bridge
