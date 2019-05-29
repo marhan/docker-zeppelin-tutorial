@@ -33,8 +33,8 @@ services:
       - 10003:80
     environment:
       AUTH_TYPE: Basic
-      USERNAME: zeppelin
-      PASSWORD: zeppelin
+      USERNAME: ${WEBDAV_USERNAME}
+      PASSWORD: ${WEBDAV_PASSWORD}
     volumes:
       - ./webdav:/var/lib/dav
     networks:
