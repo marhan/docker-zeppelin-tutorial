@@ -9,9 +9,12 @@ Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/s
 [Apache Zeppelin](http://zeppelin.apache.org/) is a Web-based notebook that enables data-driven, 
 interactive data analytics and collaborative documents with SQL, Scala and more.
 
-## Hints
-
 The Zeppelin Notebooks are placed in its [own repository](https://github.com/marhan/zeppelin-notebook-samples) and will be checked out as git submodule.
+
+## Used versions
+
+- Zeppelin version = 0.8.1
+- Spark version = 2.4.3
 
 ## Requirement
 
