@@ -52,6 +52,7 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 - [Zeppelin](https://hub.docker.com/r/apache/zeppelin)
 - [Postgres](https://hub.docker.com/_/postgres)
+- [MariaDB](https://hub.docker.com/_/mariadb)
 - [Adminer](https://hub.docker.com/_/adminer/)
 - [Minio](https://hub.docker.com/r/minio/minio/)
 - [WebDAV](https://hub.docker.com/r/bytemark/webdav/)

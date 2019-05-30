@@ -227,6 +227,132 @@
         "isUserImpersonate": false
       }
     },
+    "maria_zeppelin_db": {
+      "id": "maria_zeppelin_db",
+      "name": "maria_zeppelin_db",
+      "group": "jdbc",
+      "properties": {
+        "default.url": {
+          "name": "default.url",
+          "value": "jdbc:mariadb://mariadb:3306/zeppelin",
+          "type": "string"
+        },
+        "default.driver": {
+          "name": "default.driver",
+          "value": "org.mariadb.jdbc.Driver",
+          "type": "string"
+        },
+        "zeppelin.jdbc.principal": {
+          "name": "zeppelin.jdbc.principal",
+          "value": "",
+          "type": "string"
+        },
+        "default.completer.ttlInSeconds": {
+          "name": "default.completer.ttlInSeconds",
+          "value": "120",
+          "type": "number"
+        },
+        "default.password": {
+          "name": "default.password",
+          "value": "zeppelin",
+          "type": "password"
+        },
+        "default.completer.schemaFilters": {
+          "name": "default.completer.schemaFilters",
+          "value": "",
+          "type": "textarea"
+        },
+        "default.splitQueries": {
+          "name": "default.splitQueries",
+          "value": false,
+          "type": "checkbox"
+        },
+        "default.user": {
+          "name": "default.user",
+          "value": "zeppelin",
+          "type": "string"
+        },
+        "zeppelin.jdbc.concurrent.max_connection": {
+          "name": "zeppelin.jdbc.concurrent.max_connection",
+          "value": "10",
+          "type": "number"
+        },
+        "common.max_count": {
+          "name": "common.max_count",
+          "value": "1000",
+          "type": "number"
+        },
+        "default.precode": {
+          "name": "default.precode",
+          "value": "",
+          "type": "textarea"
+        },
+        "zeppelin.jdbc.auth.type": {
+          "name": "zeppelin.jdbc.auth.type",
+          "value": "",
+          "type": "string"
+        },
+        "default.statementPrecode": {
+          "name": "default.statementPrecode",
+          "value": "",
+          "type": "string"
+        },
+        "zeppelin.jdbc.concurrent.use": {
+          "name": "zeppelin.jdbc.concurrent.use",
+          "value": true,
+          "type": "checkbox"
+        },
+        "zeppelin.jdbc.keytab.location": {
+          "name": "zeppelin.jdbc.keytab.location",
+          "value": "",
+          "type": "string"
+        },
+        "zeppelin.jdbc.interpolation": {
+          "name": "zeppelin.jdbc.interpolation",
+          "value": false,
+          "type": "checkbox"
+        },
+        "zeppelin.jdbc.maxConnLifetime": {
+          "name": "zeppelin.jdbc.maxConnLifetime",
+          "value": "-1",
+          "type": "number"
+        },
+        "zeppelin.jdbc.maxRows": {
+          "name": "zeppelin.jdbc.maxRows",
+          "value": "1000",
+          "type": "number"
+        }
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "sql",
+          "class": "org.apache.zeppelin.jdbc.JDBCInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sql",
+            "editOnDblClick": false,
+            "completionSupport": true
+          }
+        }
+      ],
+      "dependencies": [
+        {
+          "groupArtifactVersion": "org.mariadb.jdbc:mariadb-java-client:jar:2.4.1",
+          "local": false
+        }
+      ],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "scoped",
+        "perUser": "",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "owners": [],
+        "isUserImpersonate": false
+      }
+    },
     "postgres_zeppelin_db": {
       "id": "postgres_zeppelin_db",
       "name": "postgres_zeppelin_db",
@@ -1877,7 +2003,8 @@
       "pig",
       "groovy",
       "neo4j",
-      "sap"
+      "sap",
+      "maria_zeppelin_db"
     ],
     "2EEHFRGSZ": [
       "md",

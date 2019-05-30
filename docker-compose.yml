@@ -3,8 +3,8 @@ version: '3'
 services:
 
   zeppelin:
-    build:
-      context: ./zeppelin/docker
+    build: ./zeppelin/docker
+    image: zeppelin:latest
     ports:
       - 10000:8080
     volumes:
@@ -56,6 +56,20 @@ services:
     networks:
       - zepnet
 
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: zeppelin
+      MYSQL_DATABASE: zeppelin
+      MYSQL_USER: zeppelin
+      MYSQL_PASSWORD: zeppelin
+    ports:
+      - 10005:3306
+    volumes:
+      - "mariadb_data:/var/lib/mysql"
+    networks:
+      - zepnet
+
   adminer:
     image: adminer
     environment:
@@ -64,9 +78,13 @@ services:
       - 10002:8080
     depends_on:
       - postgresdb
+      - mariadb
     networks:
       - zepnet
 
 networks:
   zepnet:
     driver: bridge
+
+volumes:
+  mariadb_data:
