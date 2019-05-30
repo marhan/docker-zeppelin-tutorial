@@ -1,4 +1,4 @@
-# Docker based Zeppelin (Work in progress)
+# Docker based Zeppelin
 
 Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) with internal [Spark](http://spark.apache.org/docs/latest/index.html).
 
@@ -33,24 +33,25 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
     docker-compose up
     
-## Access WebUIs
+## WebUIs
 
 * [Zeppelin](http://localhost:10000) 
 * [Adminer (Postgres)](http://localhost:10002) 
 * [Webdav Web Server](http://localhost:10003) 
 * [Minio Cloud Storage Server](http://localhost:10004) 
 
-## Source of data
+## Source of data used in notebooks
 
 - [London population](https://github.com/datasets/london-population)
 - [Using data mining for bank direct marketing](http://repositorium.sdum.uminho.pt/handle/1822/14838)
     
-## Docker Images used
+## Pulled Docker Images
 
 - [Zeppelin](https://hub.docker.com/r/apache/zeppelin)
 - [Postgres](https://hub.docker.com/_/postgres)
 - [Adminer](https://hub.docker.com/_/adminer/)
 - [Minio](https://hub.docker.com/r/minio/minio/)
+- [WebDAV](https://hub.docker.com/r/bytemark/webdav/)
 
 ## Development
 
@@ -64,11 +65,11 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
     docker-compose stop
     docker-compose rm --force -v
     
-### Bash into running container
+### Bash into a running container
 
     docker-compose exec <container_name> bash
-    
-### Download dependencies
 
-    cd zeppelin
-    mvn dependency:copy-dependencies -DoutputDirectory=libs
+### TODO
+
+- [ ] User Login
+- [ ] Different permissions for users
