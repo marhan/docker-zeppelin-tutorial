@@ -59,10 +59,10 @@ services:
   mariadb:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: zeppelin
-      MYSQL_DATABASE: zeppelin
-      MYSQL_USER: zeppelin
-      MYSQL_PASSWORD: zeppelin
+      MYSQL_ROOT_PASSWORD: ${MARIA_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MARIA_DATABASE}
+      MYSQL_USER: ${MARIA_USER}
+      MYSQL_PASSWORD: ${MARIA_PASSWORD}
     ports:
       - 10005:3306
     volumes:

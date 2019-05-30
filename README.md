@@ -1,4 +1,4 @@
-# Docker based Zeppelin
+# Docker based Zeppelin (Work in progress)
 
 Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) with internal [Spark](http://spark.apache.org/docs/latest/index.html).
 
@@ -23,7 +23,7 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 - Docker Compose
 
 ### Hardware (complete stack)
-- RAM = 6GB
+- RAM = 8GB
 
 ### Hardware (zeppelin only)  
 - RAM = 2GB
@@ -59,19 +59,28 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 ## Development
 
-### Recreate one specific container
+### Docker Compose CLI
+
+#### Recreate one specific container
 
     docker-compose stop
     docker-compose up --force-recreate <container_name>
     
-### Remove all containers
+#### Remove all containers and volumes
 
     docker-compose stop
     docker-compose rm --force -v
     
-### Bash into a running container
+#### Bash into a running container
 
     docker-compose exec <container_name> bash
+    
+### Docker CLI
+
+#### Show running container
+
+    docker ps # all
+    docker ps --format '{{.Names}}' # names only
 
 ### TODO
 
