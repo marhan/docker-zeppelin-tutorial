@@ -1,6 +1,7 @@
 # Docker based Zeppelin (Work in progress)
 
-Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) with internal [Spark](http://spark.apache.org/docs/latest/index.html).
+Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) 
+with inserted [Spark](http://spark.apache.org/docs/latest/index.html).
 
 ## Introduction
 
