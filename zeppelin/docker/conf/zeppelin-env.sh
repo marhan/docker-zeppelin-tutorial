@@ -10,6 +10,9 @@ export ZEPPELIN_NOTEBOOK_DIR='/opt/notebook'
 export CUSTOM_LIBS="/opt/custom_lib"
 export CUSTOM_PROPERTIES="/opt/properties"
 
+export SPARK_HOME="/opt/spark"
+export PATH=$PATH:$SPARK_HOME/bin
+
 export SPARK_SUBMIT_OPTIONS="--jars $(JARS=("${CUSTOM_LIBS}"/*.jar); IFS=,; echo "${JARS[*]}") --properties-file ${CUSTOM_PROPERTIES}/spark.properties"
 
 echo "############################################################"

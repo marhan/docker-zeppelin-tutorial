@@ -62,15 +62,15 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 ### Docker Compose CLI
 
-#### Recreate one specific container
-
-    docker-compose stop
-    docker-compose up --force-recreate <container_name>
+#### Recreate zeppelin image and container
+    
+    docker-compose rm --rmi -f -s -v zeppelin    
+    docker-compose up --force-recreate zeppelin
     
 #### Remove all containers and volumes
 
     docker-compose stop
-    docker-compose rm --force -v
+    docker-compose rm -f -v
     
 #### Bash into a running container
 
