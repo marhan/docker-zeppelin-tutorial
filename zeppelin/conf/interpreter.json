@@ -323,7 +323,7 @@
           "type": "number"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "sql",
@@ -449,7 +449,7 @@
           "type": "number"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "sql",
@@ -1909,6 +1909,7 @@
       "neo4j",
       "sap"
     ],
+    "2EBJ95BDX": [],
     "2EEHFRGSZ": [
       "md",
       "spark",
@@ -2037,6 +2038,31 @@
       "md",
       "angular",
       "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "maria_zeppelin_db",
+      "postgres_zeppelin_db",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
+    "2EBZ3FBR1": [
+      "sh",
+      "spark",
+      "md",
+      "angular",
       "livy",
       "alluxio",
       "file",
