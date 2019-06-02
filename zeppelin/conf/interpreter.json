@@ -323,7 +323,7 @@
           "type": "number"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "sql",
@@ -449,7 +449,7 @@
           "type": "number"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "sql",
@@ -2006,30 +2006,7 @@
       "neo4j",
       "sap"
     ],
-    "2EBE1G41D": [
-      "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "postgres_zeppelin_db",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "neo4j",
-      "sap"
-    ],
+    "2EBE1G41D": [],
     "2EENWCFRX": [
       "spark",
       "md",
@@ -2054,30 +2031,7 @@
       "neo4j",
       "sap"
     ],
-    "2EDHKM2R8": [
-      "spark",
-      "md",
-      "angular",
-      "sh",
-      "livy",
-      "alluxio",
-      "file",
-      "flink",
-      "python",
-      "ignite",
-      "lens",
-      "cassandra",
-      "kylin",
-      "elasticsearch",
-      "jdbc",
-      "postgres_zeppelin_db",
-      "hbase",
-      "bigquery",
-      "pig",
-      "groovy",
-      "neo4j",
-      "sap"
-    ],
+    "2EDHKM2R8": [],
     "2ECVDEN73": [
       "spark",
       "md",
