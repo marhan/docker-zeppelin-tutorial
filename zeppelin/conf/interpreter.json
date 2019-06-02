@@ -338,7 +338,7 @@
       ],
       "dependencies": [
         {
-          "groupArtifactVersion": "org.mariadb.jdbc:mariadb-java-client:jar:2.4.1",
+          "groupArtifactVersion": "org.mariadb.jdbc:mariadb-java-client:1.5.4",
           "local": false
         }
       ],
