@@ -77,14 +77,22 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
     
 #### Bash into a running container
 
-    docker-compose exec <container_name> bash
+    docker-compose exec zeppelin bash
     
 ### Docker CLI
 
-#### Show running container
+#### Show running containers
 
     docker ps # all
     docker ps --format '{{.Names}}' # names only
+    
+#### Delete all containers
+
+    docker rm $(docker ps -a -q)
+    
+#### Delete all images
+
+    docker rmi $(docker images -q)
 
 ### TODO
 

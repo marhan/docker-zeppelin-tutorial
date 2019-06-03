@@ -323,7 +323,7 @@
           "type": "number"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "sql",
@@ -449,7 +449,7 @@
           "type": "number"
         }
       },
-      "status": "DOWNLOADING_DEPENDENCIES",
+      "status": "READY",
       "interpreterGroup": [
         {
           "name": "sql",
@@ -1909,6 +1909,31 @@
       "neo4j",
       "sap"
     ],
+    "2EF86WH8Q": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "maria_zeppelin_db",
+      "postgres_zeppelin_db",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
     "2EBJ95BDX": [],
     "2EEHFRGSZ": [
       "md",
@@ -1935,6 +1960,31 @@
       "sap"
     ],
     "2EB6QMVYV": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "maria_zeppelin_db",
+      "postgres_zeppelin_db",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
+    ],
+    "2EEZSDEZG": [
       "spark",
       "md",
       "angular",
@@ -2107,6 +2157,31 @@
       "neo4j",
       "sap",
       "maria_zeppelin_db"
+    ],
+    "2ECBKCGNS": [
+      "spark",
+      "md",
+      "angular",
+      "sh",
+      "livy",
+      "alluxio",
+      "file",
+      "flink",
+      "python",
+      "ignite",
+      "lens",
+      "cassandra",
+      "kylin",
+      "elasticsearch",
+      "jdbc",
+      "maria_zeppelin_db",
+      "postgres_zeppelin_db",
+      "hbase",
+      "bigquery",
+      "pig",
+      "groovy",
+      "neo4j",
+      "sap"
     ]
   },
   "interpreterRepositories": [
