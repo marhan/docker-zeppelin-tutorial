@@ -1,14 +1,15 @@
 # Docker based Zeppelin (Work in progress)
 
-Preconfigured and dockerized [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html) 
-with inserted [Spark](http://spark.apache.org/docs/latest/index.html).
+Dockerized and preconfigured [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html).
 
 ## Introduction
 
-[Apache Spark](https://spark.apache.org) is a fast and general engine for large-scale data processing.
-
 [Apache Zeppelin](http://zeppelin.apache.org/) is a Web-based notebook that enables data-driven, 
 interactive data analytics and collaborative documents with SQL, Scala and more.
+
+[Apache Spark](https://spark.apache.org) is a fast and general engine for large-scale data processing.
+
+[Apache Hadoop](https://hadoop.apache.org/) is a open-source software for reliable, scalable, distributed computing.
 
 The Zeppelin Notebooks are placed in its [own repository](https://github.com/marhan/zeppelin-notebook-samples) and will be checked out as git submodule.
 
@@ -16,8 +17,9 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 - Zeppelin version = 0.8.1
 - Spark version = 2.4.3
+- Hadoop version = 2.8.5
 
-## Requirement
+## Requirements
 
 ### Software
 - Docker
@@ -35,7 +37,7 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
     
 ## Start complete stack
 
-    docker-compose up
+    docker-compose up -d
     
 ## WebUIs
 
@@ -64,7 +66,8 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 #### Recreate zeppelin image and container
     
-    docker-compose rm --rmi -f -s -v zeppelin    
+    docker-compose rm -f -s -v zeppelin
+    docker rmi zeppelin    
     docker-compose up --force-recreate zeppelin
     
 #### Remove all containers and volumes
