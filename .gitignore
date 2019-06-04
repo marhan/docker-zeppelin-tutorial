@@ -8,3 +8,6 @@
 /minio/data/.minio.sys
 /webdav/DavLock
 /postgres/data
+
+# created data
+*sample_output*

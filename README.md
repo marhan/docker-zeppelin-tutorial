@@ -96,5 +96,7 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 
 ### TODO
 
+- [ ] Integration of MatLab
+- [ ] Integration of Pandas
 - [ ] User Login
 - [ ] Different permissions for users
