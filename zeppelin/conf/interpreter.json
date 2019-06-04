@@ -93,7 +93,7 @@
           "type": "number"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "python",
@@ -1033,7 +1033,7 @@
           "type": "number"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "hdfs",
@@ -1086,7 +1086,7 @@
           "type": "string"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "neo4j",
@@ -1148,7 +1148,7 @@
           "type": "password"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "elasticsearch",
@@ -1346,7 +1346,7 @@
           "type": "string"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "cassandra",
@@ -1493,7 +1493,7 @@
           "type": "textarea"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "spark",
@@ -1608,7 +1608,7 @@
           "type": "number"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "sh",
@@ -1642,7 +1642,7 @@
           "type": "string"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "md",
@@ -1681,7 +1681,7 @@
           "type": "string"
         }
       },
-      "status": "READY",
+      "status": "DOWNLOADING_DEPENDENCIES",
       "interpreterGroup": [
         {
           "name": "alluxio",
