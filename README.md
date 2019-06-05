@@ -42,13 +42,30 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
 
 * [Zeppelin](http://localhost:10000) 
 * [Adminer (Postgres)](http://localhost:10002) 
+    * PostgreSQL
+        * System: PostgreSQL
+        * Server: postgresdb
+        * Username: zeppelin_admin
+        * Password: zeppelin_admin
+        * Database: zeppelin
+    * MariaDB
+        * System: MySQL
+        * Server: mariadb
+        * Username: root
+        * Password: zeppelin
+        * Database: zeppelin
 * [Webdav Web Server](http://localhost:10003) 
-* [Minio Cloud Storage Server](http://localhost:10004) 
+    * Username: zeppelin
+    * Password: zeppelin
+* [Minio Cloud Storage Server](http://localhost:10004)
+    * Access Key: zeppelin
+    * Secret Key: zeppelin 
 
 ## Source of data used in notebooks
 
 - [London population](https://github.com/datasets/london-population)
-- [Using data mining for bank direct marketing](http://repositorium.sdum.uminho.pt/handle/1822/14838)
+- [Bank data](http://repositorium.sdum.uminho.pt/handle/1822/14838)
+- [Spark examples](https://github.com/apache/spark/tree/master/examples/src/main/resources)
     
 ## Pulled Docker Images
 
