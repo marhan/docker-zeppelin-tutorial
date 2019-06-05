@@ -24,7 +24,7 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
 - Docker Compose
 
 ### Hardware (complete stack)
-- RAM = 8GB
+- RAM = 5GB
 
 ### Hardware (zeppelin only)  
 - RAM = 2GB
