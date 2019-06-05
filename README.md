@@ -95,6 +95,12 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
     
 ### Git Submodule
 
+In repository root folder you can execute the command below.
+
+    git submodule add git@github.com:marhan/zeppelin-notebook-samples.git zeppelin/notebook
+    
+This will create the file `.gitmodule` with the entry below. 
+
     [submodule "zeppelin/notebook"]
 	    path = zeppelin/notebook
 	    url = git@github.com:marhan/zeppelin-notebook-samples.git
