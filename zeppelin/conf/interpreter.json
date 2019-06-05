@@ -782,6 +782,8 @@
       "option": {
         "remote": true,
         "port": -1,
+        "perNote": "scoped",
+        "perUser": "",
         "isExistingProcess": false,
         "setPermission": false,
         "owners": [],
@@ -1958,6 +1960,10 @@
       "groovy",
       "neo4j",
       "sap"
+    ],
+    "2EEAWKTBK": [
+      "angular",
+      "spark"
     ],
     "2EEVNYYMH": [
       "spark",
