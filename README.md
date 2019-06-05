@@ -31,7 +31,8 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
 
 ## Checkout
 
-    git clone --recursive git@github.com:marhan/docker-zeppelin.git
+    git clone https://github.com/marhan/docker-zeppelin.git
+    git submodule add https://github.com/marhan/zeppelin-notebook-samples.git zeppelin/notebook
     
 ## Start complete stack
 
@@ -91,3 +92,9 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
 #### Delete all images
 
     docker rmi $(docker images -q)
+    
+### Git Submodule
+
+    [submodule "zeppelin/notebook"]
+	    path = zeppelin/notebook
+	    url = git@github.com:marhan/zeppelin-notebook-samples.git
