@@ -9,8 +9,8 @@
 /webdav/DavLock
 /postgres/data
 
-# created data
+# Zeppelin - File upload
 *sample_output*
 
-# gitmodules
-.gitmodules
+# Zeppelin - Notebooks from sub repository
+zeppelin/notebook
