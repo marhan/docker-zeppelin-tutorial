@@ -32,7 +32,7 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
 ## Checkout
 
     git clone https://github.com/marhan/docker-zeppelin.git
-    git clone https://github.com/marhan/zeppelin-notebook-samples.git zeppelin-docker/zeppelin/notebook
+    git clone https://github.com/marhan/zeppelin-notebook-samples.git docker-zeppelin/zeppelin/notebook
     
 ## Start complete stack
 
