@@ -5,13 +5,11 @@ Dockerized and preconfigured [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/s
 ## Introduction
 
 [Apache Zeppelin](http://zeppelin.apache.org/) is a Web-based notebook that enables data-driven, 
-interactive data analytics and collaborative documents with SQL, Scala and more.
+interactive data analytics and collaborative documents with SQL, Scala and more. 
+The Zeppelin Notebooks make strong use of [Apache Spark](https://spark.apache.org), which is a fast and general engine for large-scale data processing. 
+The Spark functions itself require for various tasks [Apache Hadoop](https://hadoop.apache.org/), which is a open-source software for reliable, scalable, distributed computing.
 
-[Apache Spark](https://spark.apache.org) is a fast and general engine for large-scale data processing.
-
-[Apache Hadoop](https://hadoop.apache.org/) is a open-source software for reliable, scalable, distributed computing.
-
-The Zeppelin Notebooks are placed in its [own repository](https://github.com/marhan/zeppelin-notebook-samples) and will be checked out as git submodule.
+The Zeppelin Notebooks are placed in a separated [repository](https://github.com/marhan/zeppelin-notebook-samples) and are integrated as a Git submodule.
 
 ## Used versions
 
@@ -93,10 +91,3 @@ The Zeppelin Notebooks are placed in its [own repository](https://github.com/mar
 #### Delete all images
 
     docker rmi $(docker images -q)
-
-### TODO
-
-- [ ] Integration of MatLab
-- [ ] Integration of Pandas
-- [ ] User Login
-- [ ] Different permissions for users
