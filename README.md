@@ -1,6 +1,9 @@
 # Docker based Zeppelin (Work in progress)
 
-Dockerized and preconfigured [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html).
+Dockerized and preconfigured [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html). 
+This project is meant to be a sandbox to learn Zeppelin and Spark. 
+The applications are operated with Docker, so that the student does not have to deal with the partly complex technical dependencies. 
+The goal is to enable a quick start into the technology.  
 
 ## Introduction
 
@@ -31,11 +34,12 @@ The Zeppelin Notebooks are placed in a separated [repository](https://github.com
 
 ## Checkout
 
-    git clone https://github.com/marhan/docker-zeppelin.git
-    git clone https://github.com/marhan/zeppelin-notebook-samples.git docker-zeppelin/zeppelin/notebook
+    git clone https://github.com/marhan/docker-zeppelin-tutorial.git
+    git clone https://github.com/marhan/zeppelin-notebook-samples.git docker-zeppelin-tutorial/zeppelin/notebook
     
 ## Start complete stack
 
+    docker-zeppelin-tutorial
     docker-compose up -d
     
 ## WebUIs
