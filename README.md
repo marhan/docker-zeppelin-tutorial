@@ -14,6 +14,8 @@ The Spark functions itself require for various tasks [Apache Hadoop](https://had
 
 The Zeppelin Notebooks are placed in a separated [repository](https://github.com/marhan/zeppelin-notebook-samples) and are integrated as a Git submodule.
 
+[Presentation slides can be found here](https://speakerdeck.com/markushanses/apache-zeppelin-tutorial)
+
 ## Used versions
 
 - Zeppelin version = 0.8.1
