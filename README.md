@@ -1,4 +1,4 @@
-# Docker based Zeppelin (Work in progress)
+# Docker based Zeppelin
 
 Dockerized and preconfigured [Zeppelin](https://zeppelin.apache.org/docs/0.8.1/setup/deployment/docker.html). 
 This project is meant to be a sandbox to learn Zeppelin and Spark. 
