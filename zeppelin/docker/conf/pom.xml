@@ -18,7 +18,7 @@
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
-            <version>6.0.7</version>
+            <version>8.6.0</version>
         </dependency>
         <!-- S3 via AWS SDK
             * aws sdk 1.7.4 is compatible with hadoop aws 2.7
